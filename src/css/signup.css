@@ -1,0 +1,176 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	/* background-color: #f5f7fa; */
+	background-color: rgb(151, 189, 151);
+	font-family: "Arial", sans-serif;
+}
+
+.navlogin {
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+.show_login,
+.show_signup {
+	width: 120px;
+	display: flex;
+	justify-content: center;
+	/* margin: 0 10px; */
+	opacity: 0.6;
+	transition: opacity 0.3s ease;
+}
+
+.show_login:hover,
+.show_signup:hover,
+.show_login.active,
+.show_signup.active {
+	opacity: 1;
+}
+
+.show_login.active .btn,
+.show_signup.active .btn {
+	/* background-color: rgb(7, 151, 7); */
+	background-color: rgb(236, 236, 236);
+	color: rgb(9, 103, 9);
+}
+
+.btn {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	border: none;
+	background-color: rgb(151, 189, 151);
+	color: rgba(255, 255, 255, 0.635);
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#sgp {
+	border-radius: 10px 0px 0px 10px;
+}
+#lgn {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.btn:hover {
+	background-color: rgb(112, 174, 112);
+	transform: translateY(-2px);
+}
+
+.form1,
+.form2 {
+	width: 350px;
+	height: auto;
+	align-content: center;
+
+	padding: 20px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+form {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.job {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+.owner,
+.customer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.379);
+	transition: all 0.3s;
+	padding-bottom: 20px;
+	flex: 1;
+	position: relative;
+}
+
+input[type="radio"] {
+	display: none; /* 라디오 버튼 숨기기 */
+}
+
+input[type="radio"]:checked + label {
+	color: rgb(88, 167, 88);
+	font-size: 20px;
+	font-weight: bolder;
+	transition: all 0.3s ease;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.owner label,
+.customer label {
+	display: inline-block;
+	text-align: center;
+}
+
+tr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+th {
+	width: 30%;
+	text-align: left;
+	padding: 12px;
+	font-size: 14px;
+}
+
+input {
+	flex: 1;
+	line-height: 20px;
+	padding: 8px;
+	margin-left: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 13px;
+}
+#btns {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0px;
+	justify-content: space-between;
+	margin-top: 20px;
+
+	.backbtn,
+	.loginbtn {
+		margin-top: 13px;
+		border-radius: 10px;
+		border: none;
+		height: 37px;
+		width: 150px;
+		cursor: pointer;
+		background-color: rgb(160, 197, 162);
+		color: rgba(255, 255, 255, 0.835);
+		transition: background-color 0.3s ease, transform 0.3s ease;
+	}
+	.backbtn:hover,
+	.loginbtn:hover {
+		background-color: rgb(88, 167, 88);
+		color: white;
+		transform: translateY(-2px);
+	}
+}
